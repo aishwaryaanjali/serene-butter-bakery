@@ -88,16 +88,29 @@ body {
   }
   
   @media (max-width: 600px) {
-    ul {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    ul li a {
-      display: block;
-      padding: 10px;
-    }
+  #header {
+    flex-direction: column;
+    align-items: center;
   }
+
+  #header .box {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid white;
+  }
+
+  #header .box:last-child {
+    border-bottom: none;
+  }
+
+  #header .box a {
+    display: block;
+    padding: 10px;
+    border: none;
+    width: 100%;
+  }
+}
+
   
   .home-container {
     display: flex;
