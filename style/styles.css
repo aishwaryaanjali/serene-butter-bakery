@@ -219,7 +219,7 @@ body {
   /* Reduce home text size */
   .home-text {
     max-width: 80%;
-    padding: 5px 5px 5px 20px;
+    padding: 5px 5px 5px 200px;
   }
 
   /* Reduce recipe button font size */
