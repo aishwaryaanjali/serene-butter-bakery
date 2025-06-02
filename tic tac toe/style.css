@@ -1,0 +1,50 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  background: white;
+  margin: 0;
+  padding: 40px;
+}
+
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  gap: 5px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.cell {
+  width: 80px;
+  height: 80px;
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0f0f0;
+  cursor: pointer;
+}
+#status {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #555;
+}
+
+.cell.win {
+  color: green;
+}
+
+.cell.lose {
+  color: red;
+}
