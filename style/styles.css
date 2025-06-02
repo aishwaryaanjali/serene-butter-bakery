@@ -4,12 +4,12 @@ body {
   background-attachment: fixed;
   font-family: 'Amatic SC', cursive;
   margin: 0;
-  padding-top: 80px; /* leave space for fixed header */
+  padding-top: 80px;
 }
 
 /* Navigation Bar */
 #header {
-  list-style-type: none;
+  list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
@@ -33,16 +33,16 @@ body {
   color: #fff;
   padding: 5px 20px;
   border: 1px solid #fff;
-  white-space: nowrap;
   display: inline-block;
+  white-space: nowrap;
+  transition: all 0.3s ease;
 }
 
 #header .box a:hover {
   background-color: #fff;
-  color: #000;
+  color: #250f00;
 }
 
-/* Push last nav item (brand name) to right */
 #header .box:last-child {
   margin-left: auto;
   margin-right: 20px;
@@ -51,12 +51,12 @@ body {
   cursor: default;
 }
 
-/* Grid container for recipes */
+/* Recipe Grid */
 #cont {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 40px 20px;
   place-items: center;
@@ -71,28 +71,28 @@ body {
   flex-direction: column;
   align-items: center;
   width: 250px;
-  box-sizing: border-box;
   text-align: center;
   text-decoration: none;
   color: white;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, background-color 0.3s ease;
 }
 
 #cont a:hover {
   transform: scale(1.05);
+  background-color: #e06ba2;
 }
 
 #cont img {
   width: 100%;
   height: 200px;
   border-radius: 15px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   object-fit: cover;
   transition: opacity 0.3s ease;
 }
 
 #cont img:hover {
-  opacity: 0.5;
+  opacity: 0.6;
 }
 
 #cont p {
@@ -100,7 +100,7 @@ body {
   margin: 0;
 }
 
-/* Home page layout */
+/* Home Section */
 .home-container {
   display: flex;
   justify-content: center;
@@ -111,9 +111,9 @@ body {
 
 .home-content {
   display: flex;
-  width: 80%;
+  width: 90%;
   max-width: 1200px;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.85);
   border-radius: 30px;
   overflow: hidden;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -139,15 +139,16 @@ body {
   color: white;
   border: 2px solid white;
   border-radius: 20px;
-  font-size: 30px;
+  font-size: 28px;
   text-decoration: none;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
   width: fit-content;
 }
 
 .recipe-button:hover {
   background-color: #fff;
-  color: #000;
+  color: #250f00;
+  border-color: palevioletred;
 }
 
 .home-image {
@@ -164,9 +165,8 @@ body {
   border-radius: 20px;
 }
 
-/* Responsive Styles for smaller screens */
+/* Responsive Styles */
 @media (max-width: 900px) {
-  /* Stack home content vertically */
   .home-container,
   .home-content {
     flex-direction: column;
@@ -181,16 +181,15 @@ body {
 
   .home-image {
     max-width: 100%;
-    height: auto;
-    padding: 20px 0 0 0;
+    padding-top: 20px;
   }
 }
 
 @media (max-width: 600px) {
-  /* Navigation stacks vertically and full width */
   body {
-    padding-top: 280px; /* increase this based on your nav item height × number of items */
+    padding-top: 280px;
   }
+
   #header {
     flex-direction: column;
     align-items: stretch;
@@ -200,30 +199,28 @@ body {
     width: 100%;
     border-bottom: 1px solid white;
     text-align: center;
-    margin: 0;
   }
 
   #header .box:last-child {
     border-bottom: none;
-    margin-left: 0;
-    margin-right: 0;
+    margin: 0;
   }
 
   #header .box a {
     display: block;
     padding: 12px 0;
-    border: none;
     width: 100%;
+    border: none;
   }
 
-  /* Reduce home text size */
   .home-text {
-    max-width: 80%;
-    padding: 5px 100px 5px 25px;
+    max-width: 90%;
+    padding: 10px;
+    font-size: 24px;
   }
 
-  /* Reduce recipe button font size */
   .recipe-button {
     padding: 8px 20px;
+    font-size: 24px;
   }
 }
